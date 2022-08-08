@@ -1,0 +1,10 @@
+
+
+.mockWidgetBg {
+    @apply bg-orange-500 p-6
+}
+
+
+.mockWidgetHeaderFont {
+    @apply font-sans font-medium text-emerald-600
+}

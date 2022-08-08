@@ -1,0 +1,68 @@
+{
+	
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		
+		"workbench.colorTheme": "Default Material Dark Theme",
+		"editor.fontLigatures": true,
+		"editor.semanticHighlighting.enabled": true,
+		"editor.fontSize": 14,
+		"editor.fontFamily": "MonoLisa, Dank Mono, Fira Code, Droid Sans Mono",
+		//"editor.fontWeight": "400",
+
+		"editor.tokenColorCustomizations": {
+		
+
+
+
+		
+
+
+			// GLOBAL
+			"textMateRules": [
+				{	
+					// ALL THIS WILL BE MADE ITALIC
+					"scope":[
+						"storage.type.function.js",
+						"storage.type.function.tsx",
+						"storage.type.class.tsx",
+						"storage.modifier.tsx",
+						"keyword.control.flow.tsx",
+						"storage.type.interface.tsx"
+						//"meta.function-call.js",
+						//"meta.block",
+					],
+					"settings": {
+						
+						"fontStyle": "italic"
+					}
+				},
+				{	
+					// ALL THIS WILL BE MADE ITALIC
+					"scope":[
+						//"meta.definition.function.js",
+						"variable.other.object.js",
+						"keyword.operator.type.annotation.ts",
+						"meta.var-single-variable.expr.ts",
+						"meta.type.annotation.ts",
+						"string.template.ts"
+					],
+					"settings": {
+						
+						"fontStyle": ""
+					}
+				},
+			],
+		},
+		"editor.semanticTokenColorCustomizations": {
+
+
+
+		
+		}
+	}
+}

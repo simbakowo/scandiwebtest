@@ -1,0 +1,11 @@
+
+
+.productTile {
+    @apply 
+    aspect-square 
+    grid 
+    place-items-center 
+    border-2 
+    border-neutral-800
+    
+}

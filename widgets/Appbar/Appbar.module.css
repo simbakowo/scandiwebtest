@@ -1,0 +1,27 @@
+
+
+.stickyAppbar {
+    @apply top-0 h-16 grid grid-cols-2 justify-between space-x-4 px-10 py-6
+}
+
+.title{
+    @apply font-NotoSansMono font-bold text-neutral-800 justify-self-start text-4xl
+}
+
+.buttonsRow {
+    @apply justify-self-end grid grid-cols-2 space-x-2
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
