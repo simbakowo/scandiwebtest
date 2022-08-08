@@ -3,3 +3,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.delete-checkbox{
+    @apply 
+    absolute
+    top-0
+    left-0
+    m-2
+}

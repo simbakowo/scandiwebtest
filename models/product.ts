@@ -1,5 +1,6 @@
 
 export interface ProductParameters {
+    id:number,
     sku:string | undefined,
     price:number, //ns
     name:string, //ns
@@ -14,6 +15,7 @@ interface jsonType {
 
 class Product {
 
+    id;
     sku;
     price;
     name;
@@ -25,7 +27,7 @@ class Product {
 
         // If you wante named parameters, you're gonna  have to 
         // pass all the properties in an object as the argument
-
+        this.id = properties.id;
         this.sku = properties.sku;
         this.price = properties.price;
         this.name = properties.name;
@@ -37,10 +39,11 @@ class Product {
     }
 
     // or use the 'object' type
-    static productsFromJsonList(data:jsonType[]){
+    static productsFromJsonList(data:any):Product[]|undefined{
         return data.map((doc:jsonType)=>
             new Product(
                 {
+                    id:doc.id,
                     sku:doc.sku,
                     price:doc.price,
                     name:doc.name,

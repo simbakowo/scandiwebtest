@@ -1,6 +1,8 @@
 import { Component } from "react";
 import { Product } from "../../models/product";
 import styles from './ProductTile.module.css'
+import {MyStack} from './../Stack/Stack';
+import {ProdCheckbox} from "../ProdCheckbox/ProdCheckbox";
 
 interface ProductTileProps {
     product: Product
@@ -32,13 +34,18 @@ class ProductTile extends Component<ProductTileProps, ProductTileState> {
         const postfix = attributePostfixMap[attributeName]
         return ( 
             <div className={styles.productTile}>
-                <div className="space-y-2">
-                    <span>{this.props.product.sku}</span>
-                    <span>{this.props.product.name}</span>
-                    <span>{this.props.product.price}</span>
-                    <span>{`${attributeName} : ${attributeValue} ${postfix}`}</span>
-                </div>
-                
+
+                <MyStack>
+                    <ProdCheckbox sku={this.props.product.sku}/>
+
+                    <div className={styles.detailsPositioning}>
+                        <div>{this.props.product.sku}</div>
+                        <div>{this.props.product.name}</div>
+                        <div>{`${this.props.product.price} $`}</div>
+                        <div>{`${attributeName} : ${attributeValue} ${postfix}`}</div>
+                    </div>
+                </MyStack>
+
             </div>
         );
     }
