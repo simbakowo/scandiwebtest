@@ -2,7 +2,7 @@
 export interface ProductParameters {
     id:number,
     sku:string | undefined,
-    price:number, //ns
+    price:string, //ns
     name:string, //ns
     category:string, //ns
     attributeName:string, //ns

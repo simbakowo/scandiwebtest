@@ -10,6 +10,7 @@ interface FormFieldTemplateProps {
     type?:string
     onChange?:(val:any)=>void
     isSelect?:boolean
+    step?:any
 }
  
 interface FormFieldTemplateState {
@@ -34,6 +35,7 @@ class FormFieldTemplate extends Component<PropsWithChildren<FormFieldTemplatePro
                         name={this.props.name}
                         className={styles.fieldStyle}
                         type={this.props.type}
+                        step={this.props.step}
                         placeholder={this.props.placeholder ?? ""}>
                     </input>
                 }

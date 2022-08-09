@@ -3,6 +3,7 @@
 .productTile {
     @apply 
     font-NotoSansMono
+    text-sm
     aspect-square 
     grid 
     grid-cols-1

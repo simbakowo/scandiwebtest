@@ -40,7 +40,7 @@ class CancelButton extends Component<CancelButtonProps, CancelButtonState> {
                     id="delete-product-btn" 
                     onClick={this.handleOnCancel}
                     className={styles.cancelButtonStyle}>
-                    <span>CANCEL</span>
+                    <span>Cancel</span>
                 </button>
             </div>
         );
