@@ -65,7 +65,7 @@ class UplaodForm extends Component<UplaodFormProps, UplaodFormState> {
 
         const height = _uploadFormData.height
         const width = _uploadFormData.width
-        const lenght = _uploadFormData.lenght
+        const length = _uploadFormData.length
         const size = _uploadFormData.size
         const weight = _uploadFormData.weight
 
@@ -78,7 +78,7 @@ class UplaodForm extends Component<UplaodFormProps, UplaodFormState> {
             "attributeName":attributeName,
             "height":height,
             "width":width,
-            "lenght":lenght,
+            "length":length,
             "size":size,
             "weight":weight
         }

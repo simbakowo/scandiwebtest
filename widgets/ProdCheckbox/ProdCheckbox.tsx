@@ -34,8 +34,8 @@ class ProdCheckbox extends Component<ProdCheckboxProps, ProdCheckboxState> {
     render() { 
         
         return ( 
-            <div>
-                <input type="checkbox" className="delete-checkbox" onChange={this.handleOnChange}/>
+            <div className="delete-checkbox">
+                <input type="checkbox" className="delete-checkbox2" onChange={this.handleOnChange}/>
             </div>
         );
     }
