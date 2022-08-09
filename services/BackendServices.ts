@@ -22,7 +22,6 @@ class BackendServices {
     }
 
 
-
     static async deleteProducts(skus:string[]){
 
         let axiosConfig = {
@@ -45,9 +44,7 @@ class BackendServices {
         const result = await axios.post(deleteEndpoint, skusToDelete, axiosConfig)
         console.log(result.data);
     }
-
-
-    
+ 
     static async uploadProduct(product:Product){
         let axiosConfig = {
             headers: {
@@ -56,10 +53,37 @@ class BackendServices {
             }
         };
 
-        let deleteEndpoint = "http://35.173.84.9/api/addProduct.php";
+        let uploadEndpoint = "http://35.173.84.9/api/addProduct.php";
         const data = product.toJson()
 
-        console.log(`The data is ${JSON.stringify(data)}`)
+        console.log(data)
+
+        const result = await axios.post(uploadEndpoint, data, axiosConfig)
+        console.log(result.data);
+
+        console.log(result.data["created"])
+        return result.data["created"]
+    }
+
+    static async checkIfSkuExists(sku:string){
+        let axiosConfig = {
+            headers: {
+                'Content-Type': 'application/json;charset=UTF-8',
+                //"Access-Control-Allow-Origin": "*",
+            }
+        };
+
+        let checkEndpoint = "http://35.173.84.9/api/getBySku.php";
+        const data = {
+            "sku":sku
+        }
+
+        const result = await axios.post(checkEndpoint, data, axiosConfig)
+        console.log(result.data);
+
+        console.log(result.data["exists"])
+
+        return result.data["exists"]
     }
     
 }
