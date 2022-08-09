@@ -137,12 +137,12 @@ class UplaodForm extends Component<UplaodFormProps, UplaodFormState> {
 
                 <form onSubmit={this.handleSubmit} id="product_form" action="">
 
-                    <FormFieldTemplate heading="SKU" name="sku" id="#sku"/>
-                    <FormFieldTemplate heading="Name" name="name" id="#name"/>
-                    <FormFieldTemplate type="number" heading="Price" name="price" id="#price" step="any"/>
+                    <FormFieldTemplate heading="SKU" name="sku" id="sku"/>
+                    <FormFieldTemplate heading="Name" name="name" id="name"/>
+                    <FormFieldTemplate type="number" heading="Price" name="price" id="price" step="any"/>
 
                     <FormFieldTemplate 
-                        heading="Type Switcher" name="switcher" id="#productType" 
+                        heading="Type Switcher" name="switcher" id="productType" 
                         isSelect={true} onChange={this.onSelectType} >
                         <option value="Book" id="Book" className={styles.dropdownOptionStyle} >Book</option>
                         <option value="DVD" id="DVD" className={styles.dropdownOptionStyle}>DVD</option>
@@ -152,23 +152,23 @@ class UplaodForm extends Component<UplaodFormProps, UplaodFormState> {
                     {(this.state.prodType == "Book") &&
                         <div className={styles.typeContainer}>
                             <div className={styles.hintStyle}>Please provide the Book's weight in KGs</div>
-                            <FormFieldTemplate type="number" heading="Weight (KG)" name="weight" id="#weight" step="any"/>
+                            <FormFieldTemplate type="number" heading="Weight (KG)" name="weight" id="weight" step="any"/>
                         </div>
                     }
 
                     {(this.state.prodType == "DVD") &&
                         <div className={styles.typeContainer}>
                             <div className={styles.hintStyle}>What is the size of the DVD in MBs?</div>
-                            <FormFieldTemplate type="number" heading="Size (MB)" name="size" id="#size" step="any"/>
+                            <FormFieldTemplate type="number" heading="Size (MB)" name="size" id="size" step="any"/>
                         </div>
                     }
 
                     {(this.state.prodType == "Furniture") &&
                         <div className={styles.typeContainer}>
                             <div className={styles.hintStyle}>Please provide the dimensions of this piece of furniture in centimeters</div>
-                            <FormFieldTemplate type="number" heading="Height (CM)" name="height" id="#height" step="any"/>
-                            <FormFieldTemplate type="number" heading="Width (CM)" name="width" id="#width" step="any"/>
-                            <FormFieldTemplate type="number" heading="Length (CM)" name="length" id="#length" step="any"/>
+                            <FormFieldTemplate type="number" heading="Height (CM)" name="height" id="height" step="any"/>
+                            <FormFieldTemplate type="number" heading="Width (CM)" name="width" id="width" step="any"/>
+                            <FormFieldTemplate type="number" heading="Length (CM)" name="length" id="length" step="any"/>
                         </div>
                     }
 
