@@ -5,10 +5,10 @@
 @tailwind utilities;
 
 
-.delete-checkbox{
+/* .delete-checkbox{
     @apply 
     absolute
     top-0
     left-0
     m-2
-}
+} */
