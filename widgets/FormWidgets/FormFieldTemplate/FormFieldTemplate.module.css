@@ -1,0 +1,18 @@
+
+
+.fieldStyle{
+    @apply
+    border-neutral-800 
+    border-[1px] 
+    bg-transparent 
+    px-2 h-10 
+    hover:border-x-slate-900
+    hover:border-2
+    w-11/12
+}
+
+.headingStyle{
+    @apply
+    font-NotoSansMono
+    w-1/12
+}

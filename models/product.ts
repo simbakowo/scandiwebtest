@@ -76,7 +76,18 @@ class Product {
         return productsList
     }
 
-
+    toJson(){
+        return {
+            
+                "sku" : this.sku,
+                "price" : Number(this.price),
+                "name" : this.name,
+                "category": this.category,
+                "attributeName": this.attributeName,
+                "attributeValue": this.attributeValue,
+                
+        }
+    }
 
 }
 

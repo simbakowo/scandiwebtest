@@ -1,0 +1,15 @@
+
+
+.saveButtonStyle {
+    @apply 
+    p-3
+    bg-transparent 
+    border-[1px] 
+    border-neutral-800
+    w-full 
+    font-NotoSansMono
+    font-normal
+    text-neutral-800
+    hover:bg-neutral-800
+    hover:text-white
+}

@@ -1,7 +1,13 @@
+import { NextRouter, withRouter } from "next/router";
 import { Component } from "react";
 import styles from './AddButton.module.css'
+import Router from 'next/router'
 
-interface AddButtonProps {
+interface WithRouterProps {
+    router: NextRouter
+}
+
+interface AddButtonProps extends WithRouterProps {
     
 }
  
@@ -14,10 +20,16 @@ class AddButton extends Component<AddButtonProps, AddButtonState> {
 
     }
 
+    handleOnAdd = () => {
+        Router.push('/addproduct')
+    }
+
     render() { 
         return ( 
             <div>
-                <button className={styles.addButtonStyle}>
+                <button 
+                    onClick={this.handleOnAdd}
+                    className={styles.addButtonStyle}>
                     <span>ADD</span>
                 </button>
 
@@ -26,4 +38,4 @@ class AddButton extends Component<AddButtonProps, AddButtonState> {
     }
 }
  
-export {AddButton}
+export default withRouter(AddButton)

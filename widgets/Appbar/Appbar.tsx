@@ -1,6 +1,4 @@
-import { Component } from "react";
-import { AddButton } from "../AddButton/Addbutton";
-import { MassDeleteButton } from "../MassDeleteButton/MassDeleteButton";
+import { Component, PropsWithChildren } from "react";
 import styles from './Appbar.module.css'
 
 interface AppbarProps {
@@ -12,7 +10,7 @@ interface AppbarState {
     
 }
  
-class Appbar extends Component<AppbarProps, AppbarState> {
+class Appbar extends Component<PropsWithChildren<AppbarProps>, AppbarState> {
 
     state = { 
 
@@ -29,8 +27,7 @@ class Appbar extends Component<AppbarProps, AppbarState> {
 
                 {/* buttons */}
                 <div className={styles.buttonsRow}>
-                    <AddButton/>
-                    <MassDeleteButton/>
+                    {this.props.children}
                 </div>
 
             </div>

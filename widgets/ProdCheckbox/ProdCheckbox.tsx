@@ -20,9 +20,6 @@ class ProdCheckbox extends Component<ProdCheckboxProps, ProdCheckboxState> {
 
     }
 
-    myFunc = ()=>{
-        (this.context as ProductsContextType ).addSku(this.props.sku ?? "")
-    }
 
     handleOnChange = (event:any)=> {
         //console.log(`${this.props.sku} is now ${event.target.checked}`)

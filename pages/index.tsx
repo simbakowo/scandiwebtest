@@ -1,9 +1,9 @@
-import { spawn } from "child_process";
 import { FunctionComponent, useCallback, useEffect, useState, useContext } from "react";
 import { ProductsContextType } from "../@types/prodContext";
-import { Product } from "../models/product";
 import { BackendServices } from "../services/BackendServices";
+import AddButton  from "../widgets/AddButton/AddButton";
 import { Appbar } from "../widgets/Appbar/Appbar";
+import { MassDeleteButton } from "../widgets/MassDeleteButton/MassDeleteButton";
 import { ProductsGrid } from "../widgets/ProductGrid/ProductGrid";
 import { ProductsContextFC } from './../providers/products_provider2';
 
@@ -61,19 +61,23 @@ const HomePage: FunctionComponent<HomePageProps> = () => {
 
     return ( 
         <div>
-            <Appbar title="Product List"/>
 
+            {/* // Global Appbar */}
+            <Appbar title="Product List">
+                <AddButton/>
+                <MassDeleteButton/>
+            </Appbar>
+
+            {/* // Body */}
             <div className="px-10 py-10">
                 {/* // Loading indicator */}
                 {isLoading &&
                     <span>Loading widget...</span>
-
                 }
 
                 {/* // Products grid */}
                 {!isLoading &&
                     <ProductsGrid products={products}/>
-
                 }
             </div>
         </div>
