@@ -135,7 +135,7 @@ class UplaodForm extends Component<UplaodFormProps, UplaodFormState> {
         return ( 
             <div>
 
-                <form onSubmit={this.handleSubmit} id="#product_form" action="">
+                <form onSubmit={this.handleSubmit} id="product_form" action="">
 
                     <FormFieldTemplate heading="SKU" name="sku" id="#sku"/>
                     <FormFieldTemplate heading="Name" name="name" id="#name"/>

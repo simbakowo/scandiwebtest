@@ -17,7 +17,7 @@ class SaveButton extends Component<SaveButtonProps, SaveButtonState> {
     render() { 
         return ( 
             <div>
-                <button form="#product_form" className={styles.saveButtonStyle}>
+                <button form="product_form" className={styles.saveButtonStyle}>
                     <span>Save</span>
                 </button>
 
