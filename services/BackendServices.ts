@@ -5,9 +5,9 @@ import { Product } from "../models/product";
 class BackendServices {
 
     static async getAllProducts():Promise<Product[]|undefined>{
-        //const response = await fetch("http://35.173.84.9/api/allProducts.php");
+        //const response = await fetch("https://35.173.84.9/api/allProducts.php");
 
-        const result = await axios.get("http://35.173.84.9/api/allProducts.php")
+        const result = await axios.get("https://35.173.84.9/api/allProducts.php")
         console.log(result.data)
         //const data = response.json();
         console.log(`Fetched products: ${result.data}`);
@@ -37,7 +37,7 @@ class BackendServices {
             return
         }
 
-        let deleteEndpoint = "http://35.173.84.9/api/deleteProducts.php";
+        let deleteEndpoint = "https://35.173.84.9/api/deleteProducts.php";
         const skusToDelete = {
             "skus":JSON.stringify(skus)
         }
@@ -53,7 +53,7 @@ class BackendServices {
             }
         };
 
-        let uploadEndpoint = "http://35.173.84.9/api/addProduct.php";
+        let uploadEndpoint = "https://35.173.84.9/api/addProduct.php";
         const data = product.toJson()
 
         console.log(data)
@@ -73,7 +73,7 @@ class BackendServices {
             }
         };
 
-        let checkEndpoint = "http://35.173.84.9/api/getBySku.php";
+        let checkEndpoint = "https://35.173.84.9/api/getBySku.php";
         const data = {
             "sku":sku
         }
