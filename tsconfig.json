@@ -23,7 +23,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "widgets/AlertPopup/AlertPopup.jsx"  ],
   "exclude": [
     "node_modules"
   ]
